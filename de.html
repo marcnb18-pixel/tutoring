@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="design.css" />
 </head>
 
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+</script>
+
 <body>
 
   <!-- ✅ HEADER -->
@@ -21,12 +27,28 @@
       <nav class="nav-center">
         <a href="de.html">Startseite</a>
         <a href="#about">Über mich</a>
-        <a href="#reviews">Erfahrungsberichte</a>
+        <a href="#reviews">Rezensionen</a>
         <a href="#contact">Kontakt</a>
         <a href="index.html" class="lang-flag">
   <img src="uk.png" alt="English"> 
 </a>
       </nav>
+
+      <!-- ✅ Hamburger icon (mobile only) -->
+<div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- ✅ Mobile slide-down menu -->
+ <div class="mobile-menu" id="mobileMenu">
+  <a href="#">Startseite</a>
+  <a href="#about">Über mich</a>
+  <a href="#reviews">Rezensionen</a>
+  <a href="#contact">Kontakt</a>
+  <a href="index.html" class="lang-flag">
+    <img src="uk.png" alt="English">
+</a>
+</div>
     </div>
   </header>
 
@@ -90,7 +112,7 @@
     <div class="review-row">
       <div class="review-name">Thomas</div>
       <div class="review-text">
-        <p>Marc gibt seit seinem 14. Lebensjahr Mathematiknachhilfe an der Deutschen Schule London — mit großem Erfolg. Nach seinem ersten Schüler kamen alle weiteren durch Empfehlungen. Marc ist nicht nur fachlich herausragend (15 Punkte im Abitur und ein Sonderpreis der Fachschaft), sondern hat auch ein Talent dafür, komplizierte Themen verständlich zu erklären und auf die Bedürfnisse seiner Schüler einzugehen.</p>
+        <p>Marc gibt seit seinem 14. Lebensjahr Mathematiknachhilfe an der Deutschen Schule London — mit großem Erfolg. Nach seinem ersten Schüler kamen alle weiteren durch Empfehlungen. Marc ist nicht nur fachlich herausragend (14 Punkte im Abitur und ein Sonderpreis der Fachschaft), sondern hat auch ein Talent dafür, komplizierte Themen verständlich zu erklären und auf die Bedürfnisse seiner Schüler einzugehen.</p>
       </div>
     </div>
 
@@ -149,5 +171,4 @@
 </footer>
 
 </body>
-
 </html>
