@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="design.css" />
 </head>
 
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+</script>
+
 <body>
 
   <!-- ✅ HEADER -->
@@ -19,14 +25,30 @@
   <div class="header-inner">
     <div class="site-name">Marc Nienaber Brichs</div>
     <nav class="nav-center">
-      <a href="#">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a href="de.html" class="lang-flag">
-  <img src="germany.png" alt="Deutsch">
+  <a href="#">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="de.html" class="lang-flag">
+    <img src="germany.png" alt="Deutsch">
+  </a>
+</nav>
+
+<!-- ✅ Hamburger icon (mobile only) -->
+<div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- ✅ Mobile slide-down menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="de.html" class="lang-flag">
+    <img src="germany.png" alt="Deutsch">
 </a>
-    </nav>
+</div>
   </div>
 </header>
 
@@ -150,4 +172,3 @@
 
 </body>
 </html>
-
