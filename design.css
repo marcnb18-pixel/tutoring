@@ -1,0 +1,311 @@
+/* ✅ GLOBAL STYLES */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff7de;
+  color: #1c3b5a;
+}
+
+/* ✅ HEADER */
+.site-header {
+  width: 100%;
+  background-color: #1c3b5a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff7de; /* updated */
+  margin-bottom: 14px;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #fff7de; /* updated */
+  font-size: 1.05rem;
+  font-weight: 400;
+  transition: opacity 0.25s ease;
+}
+
+.nav-center a:hover {
+  opacity: 0.7;
+}
+
+/* ✅ HERO SECTION */
+.hero-section {
+  background-color: #fff7de;
+  padding: 80px 20px;
+}
+
+.hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #1c3b5a;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #1c3b5a;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #3ecacb; /* turquoise accent */
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px; /* soft rounded rectangle */
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2bb3b4;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+}
+
+/* ✅ ABOUT ME SECTION */
+.about-section {
+  background-color: #1c3b5a; /* navy background */
+  padding: 80px 20px;
+}
+
+.about-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  color: #fff7de; /* light beige text */
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff7de; /* light beige title */
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff7de;
+}
+
+.about-image img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 900px) {
+  .about-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 260px;
+  }
+}
+
+/* ✅ REVIEWS SECTION */
+.reviews-section {
+  background-color: #fff7de;
+  padding: 80px 20px;
+}
+
+.reviews-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-inner h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #1c3b5a;
+}
+
+/* ✅ REVIEW ROW */
+.review-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* aligns name to middle */
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.review-name {
+  flex: 0 0 150px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1c3b5a;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.review-text {
+  flex: 1;
+  max-width: 700px;
+}
+
+.review-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1c3b5a;
+}
+
+/* ✅ MOBILE STACKING */
+@media (max-width: 700px) {
+  .review-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .review-name {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .review-text {
+    max-width: 100%;
+  }
+}
+
+/* ✅ CONTACT SECTION */
+.contact-section {
+  background-color: #1c3b5a; /* navy */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff7de; /* light beige */
+}
+
+.contact-intro {
+  font-size: 1.15rem;
+  color: #fff7de;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Booking button (same style as hero CTA) */
+.contact-button {
+  margin-bottom: 40px;
+}
+
+/* Contact details */
+.contact-details p {
+  font-size: 1.15rem;
+  color: #fff7de;
+  margin: 8px 0;
+}
+
+.contact-details a {
+  color: #fff7de;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .contact-inner {
+    max-width: 100%;
+  }
+}
+
+/* ✅ FOOTER */
+.site-footer {
+  background-color: #fff7de; /* beige */
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.footer-inner p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #1c3b5a; /* navy */
+}
+
+.footer-inner a {
+  color: #1c3b5a;
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
