@@ -32,14 +32,7 @@ body {
   flex-wrap: wrap;
 }
 
-.site-name {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #fff7de;
-  margin-bottom: 14px;
-}
-
-/* Language flag icon */
+/* Language flag */
 .lang-flag img {
   width: 28px;
   height: auto;
@@ -77,13 +70,12 @@ body {
 .nav-center {
   display: flex;
   align-items: center;
-  gap: 0; /* separators will define spacing */
+  gap: 0;
 }
 
 .nav-center a {
   position: relative;
-  padding: 0 24px; /* equal spacing on both sides */
-  font-family: 'Inter', sans-serif;
+  padding: 0 24px;
   font-weight: 500;
   color: #fff7de;
   text-decoration: none;
@@ -100,23 +92,6 @@ body {
   width: 1.5px;
   background-color: #fff7de;
   opacity: 0.7;
-}
-
-/* Header CTA (desktop only) */
-.header-cta {
-  display: inline-block;
-  background-color: #3ecacb;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  margin-left: 20px;
-  transition: background-color 0.25s ease;
-}
-
-.header-cta:hover {
-  background-color: #2bb3b4;
 }
 
 /* -----------------------------------------------------------
@@ -176,6 +151,18 @@ body {
   left: 0;
   z-index: 9998;
   border-radius: 0 0 12px 12px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .mobile-menu a {
@@ -190,26 +177,6 @@ body {
 
 .mobile-menu a:hover {
   color: #3ecacb;
-}
-
-.mobile-menu.show {
-  display: flex;
-  animation: slideDown 0.25s ease forwards;
-}
-
-/* Default hidden state */
-.mobile-menu {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-/* Visible state */
-.mobile-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }
 
 /* -----------------------------------------------------------
@@ -308,10 +275,60 @@ body {
 }
 
 /* -----------------------------------------------------------
+   ✅ FAQ SECTION (accordion)
+----------------------------------------------------------- */
+.faq-section {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #1c3b5a;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 10px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 18px 0;
+  cursor: pointer;
+  color: #1c3b5a;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: #2a5c8a;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 0 0 18px 0;
+  color: #333;
+  line-height: 1.55;
+}
+
+/* -----------------------------------------------------------
    ✅ REVIEWS SECTION
 ----------------------------------------------------------- */
 .reviews-section {
-  background-color: #fff7de;
+  background-color: #1c3b5a;
   padding: 80px 20px;
 }
 
@@ -324,11 +341,11 @@ body {
 .reviews-inner h2 {
   font-size: 2rem;
   margin-bottom: 50px;
+  color: #fff7de;
 }
 
-/* Review Card */
 .review-row {
-  background-color: rgba(255,255,255,0.7);
+  background-color: #fff7de;
   backdrop-filter: blur(4px);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -341,7 +358,6 @@ body {
   font-size: 1.1rem;
   color: #1c3b5a;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .review-text p {
@@ -349,10 +365,8 @@ body {
   line-height: 1.6;
 }
 
-/* Mobile Review Fix */
 @media (max-width: 700px) {
   .review-row {
-    display: block;
     padding: 16px 18px;
     margin-bottom: 18px;
   }
@@ -367,7 +381,7 @@ body {
    ✅ CONTACT SECTION
 ----------------------------------------------------------- */
 .contact-section {
-  background-color: #1c3b5a;
+  background-color: #fff7de;
   padding: 80px 20px;
   text-align: center;
 }
@@ -380,12 +394,12 @@ body {
 .contact-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #fff7de;
+  color: #1c3b5a;
 }
 
 .contact-intro {
   font-size: 1.15rem;
-  color: #fff7de;
+  color: #1c3b5a;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -394,7 +408,7 @@ body {
    ✅ FOOTER
 ----------------------------------------------------------- */
 .site-footer {
-  background-color: #fff7de;
+  background-color: #1c3b5a;
   padding: 24px 20px;
   text-align: center;
 }
@@ -402,21 +416,17 @@ body {
 .footer-inner p {
   margin: 4px 0;
   font-size: 1rem;
-  color: #1c3b5a;
+  color: #fff7de;
 }
 
-.footer-nav {
-  margin-top: 12px;
-  font-size: 0.95rem;
+.footer-logo {
+  margin-bottom: 16px;
 }
 
-.footer-nav a {
-  color: #1c3b5a;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  text-decoration: underline;
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  opacity: 0.9;
 }
 
 /* -----------------------------------------------------------
@@ -438,14 +448,6 @@ body {
 @media (max-width: 768px) {
   .nav-center {
     display: none;
-  }
-
-  .header-cta {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
   }
 
   .hero-section {
