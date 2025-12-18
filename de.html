@@ -12,18 +12,14 @@
   <link rel="stylesheet" href="design.css" />
 </head>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-  }
-</script>
-
 <body>
 
   <!-- ✅ HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="site-name">Marc Nienaber Brichs</div>
+        <div class="logo-container">
+  <img src="logo-MNTeaching.png" alt="MN Teaching Logo">
+    </div>
       <nav class="nav-center">
         <a href="de.html">Startseite</a>
         <a href="#about">Über mich</a>
@@ -35,8 +31,10 @@
       </nav>
 
       <!-- ✅ Hamburger icon (mobile only) -->
-<div class="hamburger" onclick="toggleMenu()">
-  ☰
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
 </div>
 
 <!-- ✅ Mobile slide-down menu -->
@@ -169,6 +167,8 @@
     <p class="footer-credit">© 2025 Marc Nienaber Brichs — Mathematik Nachhilfe</p>
   </div>
 </footer>
+
+<script src="main.js"></script>
 
 </body>
 </html>
